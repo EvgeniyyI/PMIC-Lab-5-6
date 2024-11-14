@@ -20,88 +20,49 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.infoapp.ui.theme.InfoAppTheme
 import com.example.infoapp.ui_components.DrawerMenu
+import com.example.infoapp.ui_components.InfoScreen
 import com.example.infoapp.ui_components.MainListItem
+import com.example.infoapp.ui_components.MainScreen
 import com.example.infoapp.ui_components.MainTopBar
 import com.example.infoapp.utils.DrawerEvents
 import com.example.infoapp.utils.IdArrayList
+import com.example.infoapp.utils.ItemSaver
 import com.example.infoapp.utils.ListItem
+import com.example.infoapp.utils.Routes
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
-    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            InfoAppTheme {
-                val topBarTitle = rememberSaveable { mutableStateOf("Диваны") }
-                val drawerState = rememberDrawerState(DrawerValue.Closed)
-                val scope = rememberCoroutineScope()
-                val mainList = rememberSaveable {
-                    mutableStateOf(getListItemsByIndex(2, this))
-                }
-                val listState = rememberLazyListState()
+            var item = rememberSaveable(stateSaver = ItemSaver) {
+                mutableStateOf(ListItem("", "", ""))
+            }
 
-                ModalNavigationDrawer(
-                    drawerState = drawerState,
-                    drawerContent = {
-                        ModalDrawerSheet {
-                            DrawerMenu() { event ->
-                                when (event) {
-                                    is DrawerEvents.OnItemClick -> {
-                                        topBarTitle.value = event.title
-                                        mainList.value = getListItemsByIndex(
-                                            event.index, this@MainActivity
-                                        )
-                                        scope.launch {
-                                            listState.scrollToItem(0)
-                                        }
-                                    }
-                                }
-                                scope.launch {
-                                    drawerState.close()
-                                }
-                            }
-                        }
-                    },
-                    content = {
-                        Scaffold(
-                            topBar = {
-                                MainTopBar(
-                                    title = topBarTitle.value, drawerState = drawerState
-                                )
-                            }
-                        ) { innerPadding ->
-                            LazyColumn(
-                                state = listState,
-                                modifier = Modifier
-                                    .padding(innerPadding)
-                                    .fillMaxSize()
-                            ) {
-                                items(mainList.value) { item ->
-                                    MainListItem(item = item)
-                                }
-                            }
+            val navController = rememberNavController()
+            InfoAppTheme {
+                NavHost(
+                    navController = navController,
+                    startDestination = Routes.MAIN_SCREEN.route
+                ) {
+                    composable(Routes.MAIN_SCREEN.route) {
+                        MainScreen(context = this@MainActivity) { listItem ->
+                            item.value =
+                                ListItem(listItem.title, listItem.imageName, listItem.htmlName)
+
+                            navController.navigate(Routes.INFO_SCREEN.route)
                         }
                     }
-                )
+                    composable(Routes.INFO_SCREEN.route) {
+                        InfoScreen(item = item.value!!)
+                    }
+                }
             }
         }
     }
-}
-
-private fun getListItemsByIndex(index: Int, context: Context): List<ListItem> {
-    val list = ArrayList<ListItem>()
-    val arrayList = context.resources.getStringArray(IdArrayList.listId[index])
-    arrayList.forEach { item ->
-        val itemArray = item.split("|")
-        list.add(
-            ListItem(
-                itemArray[0],
-                itemArray[1]
-            )
-        )
-    }
-    return list
 }

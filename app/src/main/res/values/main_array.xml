@@ -15,73 +15,73 @@
     </string-array>
 
     <string-array name="Chairs">
-        <item>Офисный стул|chair_office.jpg</item>
-        <item>Кухонный стул|chair_kitchen.jpg</item>
-        <item>Барный стул|chair_bar.jpg</item>
-        <item>Садовый стул|chair_garden.jpg</item>
+        <item>Офисный стул|chair_office.jpg|chair_office.html</item>
+        <item>Кухонный стул|chair_kitchen.jpg|chair_kitchen.html</item>
+        <item>Барный стул|chair_bar.jpg|chair_bar.html</item>
+        <item>Садовый стул|chair_garden.jpg|chair_garden.html</item>
     </string-array>
 
     <string-array name="Tables">
-        <item>Обеденный стол|table_dining.jpg</item>
-        <item>Журнальный столик|table_coffee.jpg</item>
-        <item>Письменный стол|table_desk.jpg</item>
-        <item>Прикроватный столик|table_bedside.jpg</item>
+        <item>Обеденный стол|table_dining.jpg|table_dining.html</item>
+        <item>Журнальный столик|table_coffee.jpg|table_coffee.html</item>
+        <item>Письменный стол|table_desk.jpg|table_desk.html</item>
+        <item>Прикроватный столик|table_bedside.jpg|table_bedside.html</item>
     </string-array>
 
     <string-array name="Sofas">
-        <item>Угловой диван|sofa_corner.jpg</item>
-        <item>Диван-кровать|sofa_bed.jpg</item>
-        <item>Двухместный диван|sofa_two_seater.jpg</item>
-        <item>Трехместный диван|sofa_three_seater.jpg</item>
+        <item>Угловой диван|sofa_corner.jpg|sofa_corner.html</item>
+        <item>Диван-кровать|sofa_bed.jpg|sofa_bed.html</item>
+        <item>Двухместный диван|sofa_two_seater.jpg|sofa_two_seater.html</item>
+        <item>Трехместный диван|sofa_three_seater.jpg|sofa_three_seater.html</item>
     </string-array>
 
     <string-array name="Beds">
-        <item>Односпальная кровать|bed_single.jpg</item>
-        <item>Двуспальная кровать|bed_double.jpg</item>
-        <item>Кровать с балдахином|bed_canopy.jpg</item>
-        <item>Кровать-чердак|bed_loft.jpg</item>
+        <item>Односпальная кровать|bed_single.jpg|bed_single.html</item>
+        <item>Двуспальная кровать|bed_double.jpg|bed_double.html</item>
+        <item>Кровать с балдахином|bed_canopy.jpg|bed_canopy.html</item>
+        <item>Кровать-чердак|bed_loft.jpg|bed_loft.html</item>
     </string-array>
 
     <string-array name="Wardrobes">
-        <item>Шкаф-купе|wardrobe_sliding.jpg</item>
-        <item>Двухстворчатый шкаф|wardrobe_double.jpg</item>
-        <item>Трехстворчатый шкаф|wardrobe_triple.jpg</item>
-        <item>Угловой шкаф|wardrobe_corner.jpg</item>
+        <item>Шкаф-купе|wardrobe_sliding.jpg|wardrobe_sliding.html</item>
+        <item>Двухстворчатый шкаф|wardrobe_double.jpg|wardrobe_double.html</item>
+        <item>Трехстворчатый шкаф|wardrobe_triple.jpg|wardrobe_triple.html</item>
+        <item>Угловой шкаф|wardrobe_corner.jpg|wardrobe_corner.html</item>
     </string-array>
 
     <string-array name="Dressers">
-        <item>Комод с зеркалом|dresser_mirror.jpg</item>
-        <item>Комод с ящиками|dresser_drawers.jpg</item>
-        <item>Комод для белья|dresser_linen.jpg</item>
-        <item>Комод для игрушек|dresser_toys.jpg</item>
+        <item>Комод с зеркалом|dresser_mirror.jpg|dresser_mirror.html</item>
+        <item>Комод с ящиками|dresser_drawers.jpg|dresser_drawers.html</item>
+        <item>Комод для белья|dresser_linen.jpg|dresser_linen.html</item>
+        <item>Комод для игрушек|dresser_toys.jpg|dresser_toys.html</item>
     </string-array>
 
     <string-array name="Shelves">
-        <item>Настенная полка|shelf_wall.jpg</item>
-        <item>Напольная полка|shelf_floor.jpg</item>
-        <item>Угловая полка|shelf_corner.jpg</item>
-        <item>Полка для книг|shelf_books.jpg</item>
+        <item>Настенная полка|shelf_wall.jpg|shelf_wall.html</item>
+        <item>Напольная полка|shelf_floor.jpg|shelf_floor.html</item>
+        <item>Угловая полка|shelf_corner.jpg|shelf_corner.html</item>
+        <item>Полка для книг|shelf_books.jpg|shelf_books.html</item>
     </string-array>
 
     <string-array name="Cabinets">
-        <item>Тумба под телевизор|cabinet_tv.jpg</item>
-        <item>Тумба для обуви|cabinet_shoes.jpg</item>
-        <item>Тумба для ванной|cabinet_bathroom.jpg</item>
-        <item>Тумба для кухни|cabinet_kitchen.jpg</item>
+        <item>Тумба под телевизор|cabinet_tv.jpg|cabinet_tv.html</item>
+        <item>Тумба для обуви|cabinet_shoes.jpg|cabinet_shoes.html</item>
+        <item>Тумба для ванной|cabinet_bathroom.jpg|cabinet_bathroom.html</item>
+        <item>Тумба для кухни|cabinet_kitchen.jpg|cabinet_kitchen.html</item>
     </string-array>
 
     <string-array name="Armchairs">
-        <item>Кресло-качалка|armchair_rocking.jpg</item>
-        <item>Кресло-реклайнер|armchair_recliner.jpg</item>
-        <item>Кресло с подлокотниками|armchair_armrests.jpg</item>
-        <item>Кресло для чтения|armchair_reading.jpg</item>
+        <item>Кресло-качалка|armchair_rocking.jpg|armchair_rocking.html</item>
+        <item>Кресло-реклайнер|armchair_recliner.jpg|armchair_recliner.html</item>
+        <item>Кресло с подлокотниками|armchair_armrests.jpg|armchair_armrests.html</item>
+        <item>Кресло для чтения|armchair_reading.jpg|armchair_reading.html</item>
     </string-array>
 
     <string-array name="Ottomans">
-        <item>Круглый пуф|ottoman_round.jpg</item>
-        <item>Квадратный пуф|ottoman_square.jpg</item>
-        <item>Пуф с ящиком|ottoman_storage.jpg</item>
-        <item>Пуф для ног|ottoman_footrest.jpg</item>
+        <item>Круглый пуф|ottoman_round.jpg|ottoman_round.html</item>
+        <item>Квадратный пуф|ottoman_square.jpg|ottoman_square.html</item>
+        <item>Пуф с ящиком|ottoman_storage.jpg|ottoman_storage.html</item>
+        <item>Пуф для ног|ottoman_footrest.jpg|ottoman_footrest.html</item>
     </string-array>
 
 </resources>
