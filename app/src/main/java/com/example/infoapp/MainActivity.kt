@@ -34,14 +34,25 @@ import com.example.infoapp.utils.IdArrayList
 import com.example.infoapp.utils.ItemSaver
 import com.example.infoapp.utils.ListItem
 import com.example.infoapp.utils.Routes
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             var item = rememberSaveable(stateSaver = ItemSaver) {
-                mutableStateOf(ListItem("", "", ""))
+                mutableStateOf(
+                    ListItem(
+                        id = 0,
+                        title = "",
+                        imageName = "",
+                        htmlName = "",
+                        isfav = false,
+                        category = ""
+                    )
+                )
             }
 
             val navController = rememberNavController()
@@ -51,9 +62,16 @@ class MainActivity : ComponentActivity() {
                     startDestination = Routes.MAIN_SCREEN.route
                 ) {
                     composable(Routes.MAIN_SCREEN.route) {
-                        MainScreen(context = this@MainActivity) { listItem ->
+                        MainScreen() { listItem ->
                             item.value =
-                                ListItem(listItem.title, listItem.imageName, listItem.htmlName)
+                                ListItem(
+                                    listItem.id,
+                                    listItem.title,
+                                    listItem.imageName,
+                                    listItem.htmlName,
+                                    listItem.isfav,
+                                    listItem.category
+                                )
 
                             navController.navigate(Routes.INFO_SCREEN.route)
                         }
